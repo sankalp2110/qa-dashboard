@@ -46,7 +46,7 @@ export default function Login() {
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          viewBox="0 0 24 24"
+          viewBox="0 0 20 24"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -55,16 +55,19 @@ export default function Login() {
           className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1"
         >
           <polyline points="15 18 9 12 15 6" />
-        </svg>{" "}
+        </svg>
         Back
       </Link>
       <div className="w-full items-center justify-center flex gap-3 my-9 text-foreground">
         <Image width={40} src={logo} alt={"GeekyAnts Logo"} />
-        <text className=" flex justify-center items-center text-2xl">Welcome! GeekyAnts QA</text>
+        <text className=" flex justify-center items-center text-2xl">
+          Welcome! GeekyAnts QA
+        </text>
       </div>
       {view === "check-email" ? (
         <p className="text-center text-foreground">
-          Check <span className="font-bold">{email}</span> to continue signing up
+          Check <span className="font-bold">{email}</span> to continue signing
+          up
         </p>
       ) : (
         <form
@@ -94,10 +97,15 @@ export default function Login() {
           />
           {view === "sign-in" && (
             <>
-              <button className="bg-red-700 rounded px-4 py-2 text-white mb-6">Sign In</button>
+              <button className="bg-red-700 rounded px-4 py-2 text-white mb-6">
+                Sign In
+              </button>
               <p className="text-sm text-center">
                 Don't have an account?
-                <button className="ml-1 underline" onClick={() => setView("sign-up")}>
+                <button
+                  className="ml-1 underline"
+                  onClick={() => setView("sign-up")}
+                >
                   Sign Up Now
                 </button>
               </p>
@@ -105,10 +113,15 @@ export default function Login() {
           )}
           {view === "sign-up" && (
             <>
-              <button className="bg-red-700 rounded px-4 py-2 text-white mb-6">Sign Up</button>
+              <button className="bg-red-700 rounded px-4 py-2 text-white mb-6">
+                Sign Up
+              </button>
               <p className="text-sm text-center">
                 Already have an account?
-                <button className="ml-1 underline" onClick={() => setView("sign-in")}>
+                <button
+                  className="ml-1 underline"
+                  onClick={() => setView("sign-in")}
+                >
                   Sign In Now
                 </button>
               </p>
