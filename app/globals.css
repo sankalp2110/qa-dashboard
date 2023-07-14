@@ -5,17 +5,18 @@
 @layer base {
   :root {
     --background: 200 20% 98%;
-    --btn-background: 200 10% 91%;
-    --btn-background-hover: 200 10% 89%;
+    --btn-background: 0 99% 50%;
+    --btn-background-hover: 0 100% 0%;
     --foreground: 200 50% 3%;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     :root {
-      --background: 200 50% 3%;
+      --background: 0 100% 50%;
       --btn-background: 200 10% 9%;
       --btn-background-hover: 200 10% 12%;
       --foreground: 200 20% 96%;
+
     }
   }
 }
@@ -39,4 +40,219 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+.app{
+  min-height: 100vh;
+  width: 85vw;
+  max-width: 1900px;
+  margin: 0rem auto;
+
+}
+.main-logo{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 1.7rem;
+}
+.parent-navbar{
+  padding-top: 20px;
+  margin-right: 3rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  justify-content: space-between;
+  
+}
+.lg-btn{
+  background-color: #ff0000;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.lg-btn:hover{
+  background-color: black;
+}
+.login-btn{
+  position: absolute;
+  right: 20px;
+  padding-top: 5px;
+}
+
+
+
+
+/* .navbar-links {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  
+} */
+
+.navbar-link:hover {
+  /* Styles for individual navbar links */
+  color: #ff0000;
+
+}
+.secondary-button {
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.secondary-button:hover {
+  background-color: #000000;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  font-weight: 600;
+  
+}
+
+.footer-section-one {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer-section-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer-logo-container {
+  margin-right: 20px;
+
+}
+
+.footer-icons {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.footer-icons svg {
+  font-size: 1.5rem;
+  margin-right: 1.25rem;
+  color: #585858;
+}
+
+.footer-section-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Additional styling for spans or icons inside footer sections */
+.footer-section-columns span {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.footer-section-columns svg {
+  color: #83da25;
+  font-size: 20px;
+}
+
+
+
+.home-banner-container {
+  position: relative;
+  display: flex;
+  padding-top: 3rem;
+
+}
+.home-bannerImage-container {
+  position: absolute;
+  top: -100px;
+  right: -170px;
+  z-index: -2;
+  max-width: 700px;
+}
+.home-image-section {
+  max-width: 500px;
+  flex: 1;
+}
+.home-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.primary-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+  /* line-height: 5rem; */
+  max-width: 600px;
+
+}
+.primary-text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #6a6a6a;
+  margin: 1.5rem 0rem;
+
+}
+.primary-button {
+  padding: 0.9rem 1.75rem;
+  background-color: rgb(255, 0, 0);
+  outline: none;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+.primary-button:hover{
+  background-color: rgb(0, 0, 0);
+
+}
+.secondary-button {
+  padding: 1rem 2.5rem;
+  background-color: #fe0000;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secondary-button svg {
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+.secondary-button:hover {
+  background-color: #000000;
 }

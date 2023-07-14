@@ -1,0 +1,18 @@
+/* .navbar
+{
+
+}
+*/
+  
+  .navbar-links {
+    display: flex;
+    gap: 10px; /* Adjust the value as per your desired gap size */
+    
+  }
+  
+  .navbar-links:hover {
+    /* Styles for individual navbar links */
+    color: #ff0000;
+
+  }
+  
