@@ -11,18 +11,17 @@ const Home = () => {
     <div className="home-banner-container">
     <div className="home-text-section">
           <h1 className="primary-heading">
-            Learn with the Geeks QA
+          QA Services - Software Testing
           </h1>
           <p className="primary-text">
-            Start Learning with us, dive into the world of testing.
+          Professional software testing services for quality assurance.
           </p>
           <Link href="/login" className="secondary-button">
-            Join Now<FiArrowRight/>
+            Get started<FiArrowRight/>
   </Link>
           
         </div>
         <div className="home-image-section">
-          {/* <Image src={"../assets/home-banner-image.png"} alt="banner-image" /> */}
           <Image src={BannerImage} alt={"GeekyAnts Logo"}/>
         </div>
 
@@ -38,34 +37,3 @@ const Home = () => {
  
 export default Home;
 
-
-    
-
-// import { useState, ChangeEvent, FormEvent } from 'react';
-
-// export default function Home() {
-//   const [email, setEmail] = useState<string>('');
-//   const [password, setPassword] = useState<string>('');
-
-//   const handleSubmit = (event: FormEvent) => {
-//     console.log('Form was submitted!');
-//   };
-
-//   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
-//     setEmail(event.target.value);
-//   };
-
-//   const handlePasswordChange = (event: ChangeEvent<HTMLInputElement>) => {
-//     setPassword(event.target.value);
-//   };
-
-//   return (
-//     <div className="Home">
-//       <form onSubmit={handleSubmit}>
-//         <input type="text" placeholder="Enter email address" onChange={handleEmailChange} value={email} />
-//         <input type="password" placeholder="Enter password" onChange={handlePasswordChange} value={password} />
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   );
-// }

@@ -45,8 +45,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
+  font-family: 'JetBrainsMonoNF-Regular';
 }
 .app{
   min-height: 100vh;
@@ -109,7 +108,7 @@
 }
 .secondary-button {
   padding: 5px 10px;
-  background-color: #ff0000;
+  background-color: #ba1c1c;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -255,4 +254,8 @@
 }
 .secondary-button:hover {
   background-color: #000000;
+}
+.custom-link{
+  font-weight :600; 
+  font-size: 1.4rem;
 }
