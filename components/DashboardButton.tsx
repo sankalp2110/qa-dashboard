@@ -9,7 +9,7 @@ export default function DashboardButton() {
   // Create a Supabase client configured to use cookies
   const supabase = createClientComponentClient()
 
-  const homeButton = async () => {
+  const DashboardRedirect = async () => {
     router.push("/dashboard")
     router.refresh()
   }
@@ -17,9 +17,9 @@ export default function DashboardButton() {
   return (
     <button
       className="py-2 px-4 rounded-md no-underline bg-red-700 text-white hover:bg-btn-background-hover"
-      onClick={DashboardButton}
+      onClick={DashboardRedirect}
     >
-      Home
+      Dashboard
     </button>
   )
 }

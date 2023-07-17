@@ -13,6 +13,7 @@ import { Meta } from "@/components/layout/Meta";
 import { AppConfig } from "./utils/AppConfig";
 import NavigationBar from "@/components/NavigationBar";
 import { FooterCopyright } from "@/components/layout/FooterCopyright";
+import NavigationBarHome from "@/components/NavigationBarHome";
 
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies });
@@ -26,7 +27,7 @@ export default async function Index() {
       <nav className="w-full justify-center border-b border-b-foreground/10 h-16 ">
       {/* <nav className="parent-navbar"> */}
         
-        <NavigationBar/>
+        <NavigationBarHome/>
         
       </nav>
       <div className="text-gray-600 antialiased">
