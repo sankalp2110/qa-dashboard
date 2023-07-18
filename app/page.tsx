@@ -7,7 +7,6 @@ import logo from "../assets/geekyants-logo.svg";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Home from "@/components/Home";
 import Footer from "@/components/Footer";
-import Services from "@/components/Services";
 import { VerticalFeatures } from "@/components/VerticalFeatures";
 import { Meta } from "@/components/layout/Meta";
 import { AppConfig } from "./utils/AppConfig";

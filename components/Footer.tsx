@@ -5,6 +5,7 @@ import { BsYoutube } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import Image from "next/image";
 import gaFooterLogo from "../assets/gaFooterLogo.svg";
+import { FooterCopyright } from "./layout/FooterCopyright";
 
 const Footer = () => {
   return (
@@ -39,6 +40,7 @@ const Footer = () => {
           <span>Privacy Policy</span>
         </div>
       </div>
+    
     </div>
   );
 };

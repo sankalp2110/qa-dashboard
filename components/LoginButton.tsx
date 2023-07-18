@@ -16,7 +16,7 @@ export default function LoginButton() {
 
   return (
     <button
-      className="py-2 px-4 rounded-md no-underline bg-red-700 text-white hover:bg-btn-background-hover"
+      className="secondary-button"
       onClick={login}
     >
       Login/Signup
