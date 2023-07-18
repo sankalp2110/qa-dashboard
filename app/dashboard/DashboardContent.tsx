@@ -1,9 +1,10 @@
 import React from "react";
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from "next/headers";
+import Image from 'next/image';
+import { FcLike } from "react-icons/fc";
 
-export default async function DashboardContent() {
-  // Replace these dummy data with actual user details
+const DashboardContent = async () => {
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getUser();
 
@@ -19,24 +20,30 @@ export default async function DashboardContent() {
   const user = data?.user || null;
 
   return (
-    <div className="flex">
+    <div className="flex flex-wrap">
       {/* Sidebar with user details */}
-      <div className="w-1/4 bg-gray-100 p-4">
+      <div className="w-full md:w-1/4 bg-gray-100 p-4">
         <h2 className="text-xl font-semibold mb-2">User Details</h2>
         {/* Perform null check for 'user' */}
         {user ? (
-          <p>Username: {user.email}</p>
+          <div>
+            {/* Display the user's profile image */}
+            <div className="rounded-full h-24 w-24 mx-auto mb-4 overflow-hidden">
+              <Image src="/assets/gaFooterLogo.svg" alt="User Profile" width={100} height={100} objectFit="cover" />
+            </div>
+            <p className="text-lg">Username: {user.email}</p>
+            <p className="text-sm">Role: Admin</p>
+          </div>
         ) : (
           <p>User not logged in</p>
         )}
-        {/* Add more user details as needed */}
       </div>
 
       {/* Main Content */}
-      <div className="w-3/4 p-4 space-y-4">
+      <div className="w-full md:w-3/4 p-4 space-y-4">
         {/* Cards */}
         {cards.map((card, index) => (
-          <div key={index} className="bg-white shadow-md p-4 rounded-md">
+          <div key={index} className="bg-white shadow-md p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
             <p>{card.content}</p>
           </div>
@@ -44,4 +51,6 @@ export default async function DashboardContent() {
       </div>
     </div>
   );
-}
+};
+
+export default DashboardContent;
